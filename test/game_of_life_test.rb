@@ -118,6 +118,7 @@ class GameOfLifeTest < Minitest::Test
   end
 
   def test_can_determine_multiple_fates
+    skip
     initial_matrix = [[0, 1, 0, 0],
                       [0, 0, 0, 0],
                       [1, 1, 0, 0],

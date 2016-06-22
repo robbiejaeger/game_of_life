@@ -59,5 +59,4 @@ class GameOfLife
       @next_matrix[x][y] = 1
     end
   end
-
 end
