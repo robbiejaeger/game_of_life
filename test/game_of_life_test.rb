@@ -121,15 +121,17 @@ class GameOfLifeTest < Minitest::Test
     skip
     initial_matrix = [[0, 1, 0, 0],
                       [0, 0, 0, 0],
-                      [1, 1, 0, 0],
+                      [1, 1, 1, 0],
                       [0, 0, 0, 0]]
     game = GameOfLife.new(initial_matrix)
 
-    result_matrix = [[0, 1, 0, 0],
+    game.play(1)
+
+    result_matrix = [[0, 0, 0, 0],
                      [0, 0, 0, 0],
-                     [1, 1, 0, 0],
+                     [0, 1, 0, 0],
                      [0, 0, 0, 0]]
 
-    assert_equal 1, game.next_matrix[1][1]
+    assert_equal result_matrix, game.next_matrix
   end
 end
